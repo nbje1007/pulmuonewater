@@ -1,0 +1,624 @@
+@charset 'utf-8';
+@import url('./fonts/font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+
+}
+
+body {
+    font-family: 'notokr';
+
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.0425rem;
+    color: #000;
+    line-height: 1.4;
+
+}
+
+
+/* 공통 클래스 */
+.container {
+    position: relative;
+    display: block;
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* 전체 레이아웃 */
+.wrap {
+    position: relative;
+    display: block;
+}
+
+
+/* 상단 영역 */
+.header {
+    position: relative;
+    display: block;
+}
+
+.wrap-header {
+    position: fixed;
+    display: block;
+    height: 7.4rem;
+    width: 100%;
+    overflow: hidden;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+}
+
+.header .inner {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header .container {
+    padding: 1.5rem 0 0 2rem;
+    text-align: center;
+}
+
+.logo {
+    position: relative;
+    display: block;
+
+    float: left;
+    width: 11.8rem;
+    height: 4.3rem;
+    background: url('../images/main-logo.png') no-repeat center;
+
+    font-size: 0;
+
+}
+
+.gnb {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 8rem;
+}
+
+.header-menu {
+    position: relative;
+    display: block;
+}
+
+.header-menu>li {
+    position: relative;
+    display: block;
+    float: left;
+    padding-top: 1rem;
+    margin-right: 12rem;
+}
+
+.header-menu>li>a {
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.header-menu>li::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0.2rem;
+    height: 1.1rem;
+    background-color: #aaaaab;
+}
+
+.header-menu>li:last-child::before {
+    content: none;
+}
+
+
+.header .inner .sitemap {
+    position: absolute;
+    height: 7.6rem;
+    top: 0;
+    right: 10rem;
+    cursor: pointer;
+}
+
+.header .inner .sitemap button {
+    border: none;
+    display: block;
+    width: 8.5rem;
+    height: 6.8rem;
+    background-color: #e6e6e6;
+    line-height: 8rem;
+    z-index: 999;
+}
+
+.header .all {
+    color: #222;
+    font-size: 1.6rem;
+    line-height: 8rem;
+    text-align: center;
+    text-transform: none;
+}
+
+/* 비주얼 영역 */
+
+.visual {
+    position: relative;
+    display: block;
+}
+
+.visual .container {
+    position: relative;
+    display: block;
+    height: 70.8rem;
+    width: 100%;
+    margin: 0 auto 6rem;
+    background: url('../images/main-visual.jpg') no-repeat center;
+
+}
+
+.visual-inner {
+    max-width: 117rem;
+    margin: 0 auto;
+}
+
+.visual-txt {
+    width: 35.2rem;
+    padding-top: 20rem;
+    padding-left: 2rem;
+}
+
+/* 브랜드 영역 */
+.brand {
+    position: relative;
+    display: block;
+}
+
+.brand .container {
+    position: relative;
+    display: block;
+    padding: 0 14rem;
+}
+
+.brand-list {
+    position: relative;
+    display: block;
+    float: left;
+
+    width: 33.33%;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 5.8rem;
+
+}
+
+.brand-ico {
+    position: relative;
+    display: block;
+}
+
+.brand-img {
+    display: inline-block;
+    height: 114px;
+}
+
+
+.brand-title {
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #617c05;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.brand-txt {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #505050;
+    text-align: center;
+    line-height: 1.7em;
+}
+
+/* 아이템 영역 */
+.item {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.item .container {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.item-ico {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.item-list {
+    position: relative;
+    display: block;
+}
+
+.item-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    padding-top: 10rem;
+    border-top: 0.1rem solid #d3d3d3;
+}
+
+.item-img {
+    text-align: center;
+}
+
+.item-txt b {
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.item-txt {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #6d6d6d;
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+/* 물방울 영역 */
+.warter-dot {
+    position: relative;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+/* 그린아이콘 영역 */
+.green {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.green .container {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.green-list {
+    position: relative;
+    display: block;
+}
+
+.green-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.green-list>li:before {
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+
+    height: 4rem;
+    width: 0.1rem;
+    background-color: #bbbdc2;
+}
+
+.green-list>li:first-child::before {
+    content: none;
+}
+
+.green-img {
+    text-align: center;
+}
+
+.green .txt span {
+    display: block;
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+.green .b {
+    font-size: 1.6rem;
+    color: #000;
+
+}
+
+/* 배너 영역 */
+.banner {
+    max-width: 240rem;
+    height: 25rem;
+    margin: 6rem auto 11rem;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+}
+
+
+/* CS 영역 */
+.custom {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cs .container {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.cs-list {
+    position: relative;
+    display: block;
+}
+
+.cs-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.cs-list img {
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.cs-list>li>p {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+    border-top: 0.1rem solid #bababa;
+}
+
+.cs-list>li>a {
+    color: #000;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* 하단 영역 */
+.footer {
+    margin-top: 11rem;
+    padding: 4.5rem 0 6rem;
+    border-top: 1px solid #f2f2f2;
+    background-color: #fff;
+}
+
+.footer-inner {
+    max-width: 117rem;
+    margin: 0 auto;
+}
+
+.footer-top {
+    position: relative;
+    text-align: center;
+}
+
+
+.footer .container {
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.footer-list {
+    position: relative;
+    display: block;
+    width: 22rem;
+    margin: 0 auto 3rem;
+}
+
+.footer-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.family-site {
+    position: absolute;
+    top: 0;
+    left: 40rem;
+    float: left;
+}
+
+.family-site button {
+    width: 26rem;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border: 0.1rem solid #000;
+    font-size: 1.8rem;
+    color: #666;
+
+    text-align: left;
+    line-height: 100%;
+    background-image: url("../images/icon-clamp-down.png");
+    background-repeat: no-repeat;
+    background-size: 0.6rem 0.6rem;
+    background-position: 90% center;
+
+}
+
+.number-list>li>a {
+    color: #000;
+    font-size: 1.4re;
+    letter-spacing: -0.05em;
+    text-decoration: none;
+}
+
+.footer-img {
+    text-align: center;
+}
+
+.footer-bottom {
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.notic-list {
+    position: relative;
+    display: inline-block;
+}
+
+.notic-list>li {
+    float: left;
+    text-align: center;
+}
+
+.notic-list>li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 1.5rem;
+    background-color: #b0b0b0;
+}
+
+
+.notic-list>li:first-child::before {
+    content: none;
+}
+
+
+.notic-list>li>a {
+    color: #000;
+    font-size: 1.4rem;
+    letter-spacing: -0.05em;
+    text-decoration: none;
+}
+
+.footer-number {
+    position: relative;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+.number-list {
+    display: block;
+    position: relative;
+}
+
+.number-list>li {
+    float: left;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+.number-list>li:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 9.4rem;
+    width: 0.1rem;
+    background-color: #bbbdc2;
+}
+
+
+.number-list p {
+    color: #222;
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+}
+
+.number-list b {
+    color: #000;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+.number-list span {
+    color: #222;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.address {
+    position: relative;
+    display: block;
+}
+
+.footer-address {
+    position: relative;
+    display: block;
+}
+
+.footer-address span {
+    margin-left: 1.5rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #7b7b7b;
+}
